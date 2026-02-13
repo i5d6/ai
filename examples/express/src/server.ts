@@ -66,6 +66,7 @@ app.post('/custom-data-parts', async (req: Request, res: Response) => {
   });
 });
 
-app.listen(8080, () => {
-  console.log(`Example app listening on port ${8080}`);
+const port = Number(process.env.PORT || 8082);
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`);
 });

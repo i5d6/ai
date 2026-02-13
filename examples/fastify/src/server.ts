@@ -53,4 +53,4 @@ fastify.post('/stream-data', async function (_, reply) {
   return reply.send(createUIMessageStreamResponse({ stream }));
 });
 
-fastify.listen({ port: 8080 });
+fastify.listen({ port: Number(process.env.PORT || 8081) });

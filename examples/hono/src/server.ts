@@ -91,5 +91,6 @@ app.post('/chat', async c => {
 
 app.get('/health', c => c.text('Hono AI SDK example server is running!'));
 
-console.log('Server starting on http://localhost:8080');
-serve({ fetch: app.fetch, port: 8080 });
+const port = Number(process.env.PORT || 8083);
+console.log(`Server starting on http://localhost:${port}`);
+serve({ fetch: app.fetch, port });
